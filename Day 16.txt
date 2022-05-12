@@ -1,0 +1,64 @@
+
+What Is Docker ..?
+
+1.Docker is a software development platform to deploy apps
+2.Apps are packaged in containers that can be run on any OS
+Apps run the same :
+  Any machine
+ no compatibility issue
+ less work
+Easier to maintain and deploy
+works with any language , Any OS , Any technology
+
+where are docker images stored.?
+
+1.Docker images are stored in Docker Repo
+2.Public Docker HUB
+ ubuntu,mysqk,java...........
+3.Private: Amazon ECR ( Elastic Container Registry )
+4.public : Amazon ECR public
+
+
+Docker Containers Management
+
+ECS: Amazon own container platform
+Fargate: Amazon ows serverless container platform
+EKS: amazon's Managed Kuberenets
+
+
+Ecs:
+!.Elastic Container Service
+2.launch Docker container on AWS
+3.AWS take care of starting / stopping the containers
+4.has integration with Load Balancer
+
+Fargate:
+1.launch docker container on AWS
+2.Serverless
+3.Aws just runs container for you based on cpu/ram
+
+EKS
+Amazon Elastic Kubernetes Service;
+1.It is  a way to launch managed kubernetes clusters on AWS
+2.kubernetes is an open-source system for automatic deployment , scaling and management of container( docker) app
+3.EKS supports EC2 if you want to deply worker nodes or fargate serverless container
+
+use-case : If your company is already using kubernetes on-premises ,or int another cloud and wants to migrate
+to aws using kuberentes
+
+
+AWS SNOW FAMILY:
+1.Highly-secure ,portable devices to collect and process data at the edge and migrate data into and out of aws
+
+Data migration : snowcone , snowball edge , snowmobile
+
+edge computing:  snowcone, snowballedge
+
+
+Data migration with AWS snow family:
+
+challenges:
+1.Limited Connectivity
+2.Limited bandwidth
+3.High network cost
+4.Shared bandwidth

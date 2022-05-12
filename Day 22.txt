@@ -1,0 +1,32 @@
+
+RedShift
+
+
+Data is loaded from s3,Dynamdob,Dms,and other DB
+From 1 node to 128 nodes , up to 160 gb of space per node
+Redshift perform queries directly against s3 ( no need to load )
+
+Neptune:
+
+1.Fully managed graph database
+When do we use graph.?
+ 1.High relationship data
+ 2.Social network user friends with user, replied to comment on post and user and like others comment
+
+2.high available across 3AZ , with up to 15 read replicas
+3.point-in-time recovery , continous backup to Amazon s3
+
+neptune for solution architect:
+
+1.operation: similar to RDS
+2.Security: Iam , vpc, kms, ssl
+3.reliability: multi - AZ, clustering
+4.performance: best suited for graphs, clustering to improve performance
+5.Cost: pay per node provisioned 
+
+
+REMEMBER:
+Neptune=Graphs
+
+
+

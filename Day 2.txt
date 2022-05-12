@@ -1,0 +1,48 @@
+IAM : Users & Groups
+
+1.IAM = Identity and access Management , Global service
+2.Root account created by default , shouldnt be used or shared
+3.Users are people within your organization, and can be grouped
+4.Groups can contain user,not other groups
+5.Users dont have to belong to group and user can belong to multiple groups
+
+Group: Developers      group:audit team            group:operations 
+
+Alice Bob      Charles                   David       Edward                   freed
+
+There is one group called developers,In developers there is another group called operations,In operations there are 5 members
+so how much time will operations mates will take to complete the task.?
+1.will the operation group will run
+2.will the operation group will not run
+
+
+cli -command line interface
+gui-graphical user interface
+
+IAM Permissions
+
+1.Users or Groups can be assigned JSON documents called policies :-
+2.These policies define the permission of the users
+3.In Aws you apply the least principle: dont give more permission than a user needs
+
+
+using aws cli
+
+You should install aws cli
+
+
+1.how to create the user
+2.how to create the group
+3.how to create a policy
+4.installing aws cli
+5.how we can use it
+6.how we can use IAM user through password (login process)
+
+
+
+
+user - admin
+group -admins (user has been added to the group) - IAMRead 
+
+
+

@@ -1,0 +1,41 @@
+Scalabiltiy & High Availabilty
+
+1.Scalabilty means that an application / system can handle greater loads by adapting
+2.there are two kind of scalability:
+   1.vertical Scalability
+   2.Horizontal scalabilty
+Scalability is linked but different to high ava
+
+Vertical Scalability:
+
+1.Vertical Scalability means increasing the size of an instance
+2.for ex: your application is running on t2.micro
+3.scaling that application vertically means running it on t2.large
+4.Verticial scalability is very common for non distributed system such as database
+5.RDS , ElastiCache are services that can scale vertically
+
+
+Horizontal Scalability:
+
+1.Horizontal Scalability means increasing the number of instance / system for your application
+2.this us very common for web application/modern application
+
+
+what is load balancing .?
+
+load balancer are servers that forward internet traffic to multiple servers
+
+why use a load balancer .?
+
+1.spread load across multiple downstream instances
+2.expose a single point of access (DNS) to your application
+3.handle failures
+4.seprate public traffic to private traffic
+
+ec2 load balancer
+1.an ELB load balancer is a managed load balancer
+   aws gurantee that it will be working
+   aws takes care of upgrades , maintainece , ha
+
+2.it cost less to setup your own load balancer
+3.it is integrated with aws services

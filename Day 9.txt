@@ -1,0 +1,36 @@
+Network Load Balancer (NLB)
+
+1.Network load balancer ( layer 4) :
+  1.Forward TCP & UDP traffic to your instance
+  2.handle millions of request per seconds
+  
+NLB has one static IP per AZ and supports elastic IP
+
+
+SSL /TLS 
+
+1.An ssl certificate allows traffic between your clients and your load balancer
+2.SSL refers to SECURE SOCKETS LAYER , used to encrypt connections
+3.TLS refers to Transport Layer security , which is a newer version
+4.Nowadays,TLS certificates are mainly used , but people still refer ssl
+
+5.Publi ssl certificates are issued by CA (certificate authorities)
+6.Ssl certificate have any expiration date
+
+
+Load Balancer - SSL
+
+1. the load balancer uses an X.509 certificate 
+2.you can manage using ACm ( aws certificate manager)
+
+
+
+Auto scaling group (ASG)
+
+1.In real-life the load on your websites and appplication can change
+in the cloud , you can create and get rid of servers very quickly
+
+the goal of ASG is to:
+  1.Scale out( add EC2 instance) to match an increased load
+  2.Scale in( remove ec2 instance ) to match a decreased load
+  3.Automatically register new instance to a load balancer

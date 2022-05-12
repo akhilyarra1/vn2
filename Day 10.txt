@@ -1,0 +1,56 @@
+AWS RDS 
+
+1.RDS stands for Relational Database services
+2.Its a managed DB service for DB use SQL as a query langauage
+3.It allows you to create databases in the cloud that are managed by AWS
+   1.Postgres
+   2.Mysql
+   3.MariaDB
+   4.oracle
+   5.microsoft SQl server
+   6.Aurora ( Aws proprietary database)
+
+Advantages over using RDS deploying DB on EC2
+ 1.RDS is managed service:
+   1.Automated Provisioning Os patching
+   2.Monitoring Dashboards
+   3.Multi AZ setup for DR
+   4.Maintenace windows for upgrades
+   5.Storage backed up EBS
+2.we cannot do ssh here
+
+RDS Backups:
+
+1.Backups are automatically enabled in RDS
+2.Automated Backups:
+ 1.Daily full backup of the database ( during the maintenace window)
+ 2.Transaction logs are backed up in RDS every 5 mins 
+ 3.7 days retention ( can be increased to 35 days )
+
+
+DB Snapshots:
+ 1.manually triggered by the user
+ 2.Retention of backup for as long as you want
+
+
+
+
+Amazon Aurora
+
+1.Aurora is technology from AWS (not open sourced)
+2.Postgres and MySQl are both supported as Aurora DB (that means your drivers will work as if aurora was a postgresql or mysql
+3.Aurora is "aws cloud optimized" and claims 5x performance 
+4.Aurora storage automatically grows in increments of 10GB up to 64GB
+5.failover in aurora is instantenous , Its HA
+6.Aurora costs more than RDS ( 20 %) - but it is more efficient
+
+
+Features of Aurora
+
+1.Automatic Fail-over
+2.backup and Recovery
+3.Isolation and Security
+4.Industry Compilance
+5.Push-button scaling
+6.advanced monitoring
+7.routine Maintenance

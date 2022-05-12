@@ -1,0 +1,46 @@
+AWS Athena
+
+1.Serverless service to perform analytics directly against s3 files
+2.Uses SQL language to query the files
+3.Has a JDBC/ODBC driver
+4.Charged per query and amoubnt of data scanned
+5.Supports CSV,JSON,ORC,Avro and Parquet (built on presto)
+6.use case: BI / Analytics / reporting analyze & query
+Exam : Analyze data directly on s3 --- > use Athena
+
+
+AWS CLoudfront
+
+1.CDN ( Content Delivery Network )
+2.Improves read performance , content is cached at the edge
+3.216 points of Presence globally ( edge locations )
+4.can expose external HTTPS and internal HTTPS
+
+s3 bucket:
+1.For distributing files  and caching them at the edge
+2.Enhanced Security with cloudfront origin (OAI)-Origin access identity
+3.Cloudfront can be used as an ingress ( to upload the s3 files )
+
+Customer origin (HTTP)
+1.Application load balancer
+2.Ec2 instance
+3.s3 websites
+4.Any http backend
+
+
+
+Cloudfront Url/ cookies
+
+1.You want to distribute paid shared content to premium users over the world
+2.we can cloudfront url /cookie . we attach a policy
+   1.Include URL expiration
+   2.Includes IP ranges to access the data
+   3.Trusted signers
+3.How long should the url be valid for .?
+  1.Shared Content(movie,music) make it short ( a few minutes)
+  2.Private content ( private to the user) :you can make it last for years
+
+signed url = access to individual files 
+signed cookies = access to multiple files 
+
+

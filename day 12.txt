@@ -1,0 +1,64 @@
+
+AMAZON s3
+
+1.Amazon s3 is one of the main building blocks of AWS
+2.its advertised as "infinitely scaling " storage
+3.Many websites use Amazon s3 as backbone
+4.Many aws services uses amazon s3 as an integration .
+
+
+Amazon s3 - bucket
+
+1.amazon s3 allows people to store objects (files) in "buckets"
+2.buckets must have a globally unique name
+3.buckets are defined at the region level
+naming convetion: no uppercase,no underscore,3-63 char long, not an ip , must start with lowecase letter or number
+
+
+1.object (files) have a key
+2.this key is the full path:
+  1.s3://my-bucket/my_file.txt
+3.there's no concept of "dict" within buckets
+
+Objects:
+1.object values are the content of the body
+  1.max object size is 5TB(5000GB)
+  2.If uploading more than 5GB,must use "multi-part upload"
+
+
+Version ID ( If versioning is enabled )
+
+1.you can version your files in amazon s3
+2.it is enabled at the bucket level
+3.Same key overwrite , will increament v1,v2,v3
+
+any file that is not versioned prior to enabling versioning will have version "null"
+
+
+s3 Encryption :
+
+1.There are 4 method of encrypting object in s3
+ 1.sse-s3:  encrypts s3 objects using keys handled & managed by aws
+ 2.sse-kms : leverage AWS key managment service to manage encryption keys
+ 3.sse-c when you want to manage your encryption key
+ 4.Client side Encryption
+
+sse-s3:
+1.object is encrypted server side
+2.AES-256 encryption type
+3."x-amz-server-side-encryption":"AES256"
+
+sse-kms
+1.Kms advantage is user control + audit trail
+2."x-amz-server-side-encryption":"aws:kms"
+
+sse-c
+1.HTTPS only
+2.amazon s3 does not store the encryption key you provide
+
+
+client-side encryption:
+1.Client library such as Amazon s3 encryption client
+2.client must encrypt data themselves before sending to s3
+3.client must decrypt the data themselves while retrieving s3
+4.customer fully manages the keys and encryption cycle

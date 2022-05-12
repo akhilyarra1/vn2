@@ -1,0 +1,12 @@
+Aws lamda limits:
+
+Execution:
+
+1.memory allocation - 128MB-10GB
+2.maximunm time:900 sec (15 minutes)
+3.512 mb -disk capacity
+
+Deployments:
+1.Lamda function deployment size (.zip) = 50MB
+2.Size of uncompressed = 250MB
+3.Can use the /tmp directory to load other files at startup

@@ -1,0 +1,62 @@
+
+What is Serverless ?
+
+1.Serverless is a new paradigm in which developers dont have to manage server anymore
+2.They just deploy code
+3.They just deploy ....Functions ..!!
+4.intially serverless == FAAS ( Function as a Service )
+5.Serverless was pioneered by AWS lamda but now also includes anything thats managed
+"databases,messaging,storage"
+6.serverless does not mean there are no servers
+it means you just dont manage / provision/ see them
+
+Serverless 
+
+1.AWS lamda
+2.DynamoDB
+3.AWS cognito
+4.AWS Api Gateway
+5.Amazon s3
+6.AWS SNS & SQS
+7.AWS Kinesis Data Firehose
+8.Aurora
+9.Fargate
+
+
+Why AWS lamda
+
+Amazon EC2:
+virtual servers in cloud
+limited by Ram and CPu
+continously running
+Scaling means add / remover servers
+
+AWS Lamda:
+virtual function - no server to manage !!
+limited by time - short exeuction
+Run on-demand
+Scaling is automated
+
+
+Benefits of AWS Lamda
+
+1.Easy pricing
+  1.Pay per request and compute time
+  2.Free tier of 1,000,000 AWS lamda request and 400,000 GBs of compute time
+
+2.Integrates with whole AWS services
+3.Integrated with many programming language
+4.Easy monitoring through AWS Cloudwatch
+5.Increasing RAM will also improve CPU and network
+
+AWS Lamda Language support:
+
+1.Node js (javasrcipt)
+2.Python
+3.Java ( java 8 )
+4.C#
+5.Golang
+6.C# / powershell
+7.Ruby
+9.API
+

@@ -1,0 +1,39 @@
+
+S3 Websites:
+
+S3 can host static websites , and have them accessible on the www
+the website url
+bucket_name.s3-website-aws_region.amazonaws.com
+
+
+If you get a 403 error, make sure bucket policy allows public read
+
+MFA( multi factor auth) forces user to generate a code on a device ( usually a mobile phone or hardware)
+before doing important operation on S3
+
+.To use MFA-Delete , enable versioning on the S3
+you will need MFA to
+ 1.performance delete an object version
+ 2.Suspend versioning on the bucket
+
+
+you wont mfa for
+1.enabling version
+2.Listing deleted version
+
+S3 access logs:
+
+1.For audit purpose , you may want to log all access to s3 buckets
+2.Any request made to s3, from any account , authorized or denied will be logged into another s3 bucket
+3.This data can be analyzed using data analysis tools
+
+
+s3-Storage Classes
+
+1.Amazon s3 standard - General purpose
+2.Amazon s3 standard - infrequent access
+3.Amazon s3 One Zone-Infrequent access
+4.Amazon s3 Intelligent Tiering
+5.Amazon Glacier
+6.Amazon Glacier Deep Archive
+

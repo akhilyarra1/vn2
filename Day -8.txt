@@ -1,0 +1,53 @@
+Types of Load Balancer on AWS
+
+AWS has 3 knids of managed load balancers
+
+1.Classic Load Balancer (v1 - old generation) -2009
+  http,https,tcp
+2.Application load balancer(v2 - new generation) - 2016
+ http, https,Websocket
+3.Network load balancer (v2-new generation) -2017
+  tcp ,tls(secure tcp) & udp
+
+Load balncer security groups
+
+Key points:
+
+1.LBs can scale but not instantaneoulsy - contact aws for a "warm-up"
+2.troubleshooting
+  1.4xx errors are client induced errors
+  2.5xx errors are application induced error
+  3.load balancer errors 503 means at capacity or no registered targets
+  4.if the lb cant connect to your application check your security groups
+3.Monitoring
+ 1.ELB access logs will log all access request
+ 2.cloudwatch metrics will give you statistics
+
+1.Classic Load Balancer(v1)
+
+1.Supports TCP,HTTP & HTTPS
+2.health checks are tcp or http based
+3.fixed hostname
+xxx.region.elb.amazonaws.com
+
+
+Application Load Balancer (v2)
+
+1.Application load balancer is layer 7 (HTTP)
+2.load balancing to multiple HTTP application across machines (targte group)
+3.Load balancing to mutplie application on the same machine(ex:container)
+4.support for HTTP/S and Websocket
+
+
+Routing tables of different target groups:
+ 1.Routing based on url=(example.com/users & example.com/posts)
+ 2.routing based on hostname in url ( one.example.com)
+
+use case
+ALB are great fit for micro-services & container based application
+(ex docker & amazon ecs)
+
+target groups:
+1.ec2 instances
+2.lamda functions
+3.ip address

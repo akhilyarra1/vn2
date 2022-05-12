@@ -1,0 +1,64 @@
+Aurora Overview:
+
+1.Compatible APi for Postgres/MYsql
+2.Data is held in 6 replicas across 3 AZ
+3.Multi AZ , Auto Scaling Read Replicas
+4.Auto Scaling of Storage from 10GB to 64TB
+Aurora serverless - for unpredictable workloads
+
+use case: Same as RDS , but less maintaince / more flexbility / more performace
+
+Aurora for Solution Archiect:
+
+1.operation: less operation, auto scaling storage
+2.Security: AWS reponsible for Os security , we are responsible for setting up KMS , security groups ,IAM policies
+3.Reliability: MUlti AZ, highly available ,possibly more than RDS, Aurora serverless option 
+4.Performance: 5x performance , up to 15 read replicas ( only 5 for RDS )
+5.Cost: Pay per hour based on EC2 and storage usage, possibly lower cost compared to Entreprise database such as Oracle
+
+
+DynamoDB
+
+1.AWS technology , Managed NOSQL database
+2.Serverless, provisioned capacity , auto scaling 
+3.Highly avaiable, Multi AZ by default , Auto Scaling Read and write
+4.Security , authentication and authorization is done through IAM
+5.DynamoDb Streams to integrate with AWS Lambda
+6.backup/restore feature
+7.Monitoring through cloudwatch
+8.can only query on primary key, sort key or indexes
+
+use case: Serverless archiecture development , distributed serverless cache
+doesnt have SQL query language aviable
+
+
+DynamoDB for solution architect:
+1.Operation: no operation needed, auto scaling capability,serverless
+2.Security: full security through IAM policies, KMS encryption , SSl in flight
+3.reliabilty: multi AZ, Backups
+4.Performance: single digit miliseconds performance , performance doesnt degrade if your application scales
+5.Cost: Pay per provisioned capacity and storage usage 
+
+
+Athena Overview:
+
+1.Fully serverless database with SQL capabilites
+2.Used to query data in S3
+3.pay per query
+4.output result back to s3
+5.Secured through IAM
+
+use case: one time SQL queries, Serverless queries on s3, log analytics
+
+Athena for Solution architect:
+
+1.Operation: no operation needed , serverless
+2.Security: IAM + s3 security
+3.Reliabilty: managed service, highly avaiable
+4.performance: queries scale based on data size
+5.Cost: pay per query / Per TB of data scanned , serverless
+
+Aws GLUE
+1.Managed extract,transform and load(ETL) service
+2.Useful to prepare and transform data for analytics
+3.fully serverless service

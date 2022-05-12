@@ -1,0 +1,60 @@
+Subnets :
+
+1.AWS reserves 5 Ips address ( first 4 and last 1 Ip address ) in each subnet
+these 5 Ips are not avaiable for use and cannot be assigned to any instance
+ex: if CIDR Block 10.0.0.0/24 
+   reserved Ip are:
+   10.0.0.0 : Network address
+   10.0.0.1: Reserved by AWS for vpc router
+   10.0.0.2 : Reserverd by aws provided DNS
+   10.0.0.3:aws for future use
+   10.0.0.255: Network brodcast address, AWS does not support broadcast in a VPC
+
+
+If you need 29 Ip address for EC2 instance ,you cant choose a subnet of size /27 ( 32 Ip)
+you need atleast 64 Ip,subnet size /26 ( 64 -5 =59 >29  but 32 -5= 27 <29)
+
+
+CIDRs
+102.168.0.0/24 = ?
+(256 Ip )
+/16:
+(65536 Ip)
+/32 
+(only 1)
+0.0.0.0/0
+all ip
+
+
+
+/32 allow for 1 Ip =2^0
+/31 allows for 2 Ip = 2^1
+/30            4     = 2^2
+
+
+
+/24 allows for 256 ip = 2^8
+/16 allows for 65536 Ip =2^16
+/0 = 2^32
+
+CIDR:
+A CIDR has two components:
+  1.the base Ip (xx.xx.xx.xx)
+  2.The subnet mask (/26)
+
+the base Ip represents an Ip contained in the range
+the subnet mask defines how many bits can change in the IP
+
+255.255.255.0 -->less common
+/24 --- > More common
+
+
+Internet Gateway:
+
+1.Internet Gateway helps our VPC instance connect with the internet
+2.it scales horizontally and is HA
+3.Must be created separately from VPC
+4.one vpc can only be attached to one IGW 
+
+Internet Gateways on their own do not allow internet
+Route tables must be editied..!!!

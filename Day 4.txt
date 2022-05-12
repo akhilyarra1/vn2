@@ -1,0 +1,32 @@
+SSH troubleshooting
+
+Students have the most problem with ssh
+putty
+
+If one method works , go with ssh putty
+
+Ec2 Instance purchasing option
+
+1.on-Demand Instance short workload , predicatable pricing
+2.reserved (minimum 1 year)
+3.spot instance: short workloads,cheap and (less reliables)
+
+EC2 spot instance:
+
+1.Can get a discount up to 90% compared to on-demand
+2.Instance that you can "lose" at any point of time if your max price is less than the current spot price
+3.The MOST cost-efficient instance in AWS
+
+Useful for workloads that are cause to failure
+1.Batch jobs
+2.Data anlaysis
+3.Image processing
+4.Any distributed workloads
+
+
+Which Purchasing option is right for me.?
+
+Resort  :   1.on-demand:coming and staying in resort whenever we like, we pay the full price
+            2.Reserved:like planning ahead and if we plan to stay for a long time , we may get a good discoved
+            3.Spot:the hotel allows people to bid for the empty rooms and the highest bider keeps the romms, you can get kicked up
+            4.Dedicated hosts: we book an entire building of the resort

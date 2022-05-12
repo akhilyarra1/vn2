@@ -1,0 +1,84 @@
+whats an EBS Volume .?
+
+1.An EBS(Elastic Block Store) Volume is a network drive you can attach to your instance
+while they run
+2.It allows your instance to persist data , even after their termination
+3.They can only be mounted to one instance at a time ( at the CP level)
+4.They are bound to a specific AV
+
+Think EBS like a "network USB stick"
+Free tier: 30 GB of Free EBS storage of type General purpose SSD or magnetic per month
+
+
+EBS volume:
+
+1.Its a network drive(not a physical drive)
+2.Its locked to an AZ
+   1.An EBS volume in us-east-1a cannot be atttached to us-east-1b
+    2.to move a vloume across,first you need to snapshot it
+
+
+
+us-east-1a                                   1b
+
+
+1ec2              2ec2                      1ec2
+
+
+ebs(100 gb)      2ebs(200gb)                 ebs(100gb)
+
+
+EBS Snapshot:
+
+1.Make a backup(snapshot) of your ebs volume at point in time
+2.Not necessary to detach volume to do snapshot , but recommended
+3.Can copy snapshot across AZ or Region
+
+us-east-1a                                       us-east-1b
+
+ec2                                                  ec2
+
+
+ebs ------------------- snapshot  --------------     ebs    
+
+
+
+
+1.Create a volume (not encrypted)
+2.we will take a snapshot ( not encrypted )
+3.we will copy a snapshot from a snaphot (encrypted)
+4.we will attach volume (encrypted)   
+
+
+
+
+AMI Overview:
+
+1.Amazon Machine Image
+2.AMI are a customization of an ec2 instance
+   1.you can add own software , configuration ,operating system , monitoring ..
+   2.Faster boot/ all software which you need is pre-packaged
+3.AMI are bulit for a specific region ( and can be copieacross region)
+
+
+
+
+Process:
+
+1.we will start an ec2 instance with some customize
+2.stop the instance 
+3.build the ami - ebs snapshot
+4.launch instance 
+
+us-east-1a                                       us-east-1b
+ ec2   -------------custom ami------------------- ec2                                                 
+        create ami                 launch from ami
+
+
+
+Task:
+1.create an ec2 instance with user data script 
+  and check are you getting hello world using public ip
+2.create an AMI with it
+3.launch an ec2 instance with that AMI
+4.check are you getting hello world output

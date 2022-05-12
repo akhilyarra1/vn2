@@ -1,0 +1,68 @@
+
+DynamoDB
+
+1.Fully Managed Highly availabe with replication across 3 AZ
+2.NoSQL database - not a realtional database
+3.Scales to massive workloads
+4.Millions of request per second , trillions of row ,100s of TB of Storage
+5.Fast and consistent in performance
+6.Intergated with IAM for security , authorization and adminsitraion
+
+DynamoDB - Basics
+
+1.DynamoDB is made of tables
+2.each table has a primary key ( must be decided at creation time) 
+3.Each table can have an infinte number of items ( = rows)
+4.Each item has attributes 
+5.Max 400KB
+Data types that are supported:
+  1.Scalar types: Strings, numbers, Binary, boolean , NULL
+  2.list,MAP
+  3.String,set.number set,binary set
+
+
+API Gateway:
+
+1.Lamda function:
+  Invoke lambda function
+  Easy way to expose REst APi is using lamda
+
+2.HTTP:
+  1.Expose HTTP endpoints in the backend
+  2.HTTP on ALB
+3.AWs service
+  1.Expose an AWS API through API  Gateway
+  2.Example start an AWS setp function , logs ..
+
+
+
+Choosing the Right Database.?
+
+1.we have lot of managed database on AWS
+   1.Read -heavy,write-heavy or balanced workloads .?
+   2.how much data to store and for how long.? will it grow
+   3.How are they accessed
+   4.Data durability 
+   6.Latency
+   7.more flexbility?NOSQL.?
+   8.Listen costs ?
+
+RDS Overiew:
+ 
+1.Managed PostgreSQl / mySQL / Oracle /SQL server
+2.must provision an EC2 instance & EBS volume
+3.Support for Read replicas and Multi AZ
+4.Security through IAM , Security groups , KMS
+5.backup/ snapshots/ point in time restore 
+6.monitor through cloudwatch
+
+
+RDS for solution Architect:
+
+1.operation:when maitaince happens , scailing in read replicas /ec2 instance /restore EBS application 
+            changes
+2.security: AWS responsible for OS security , we are responsible for setting up KMS ,security groups
+            IAM policies 
+3.reliabilty: Multi AZ 
+4.Performance: Depends on EC2 instance type,EBS volume type
+5.Cost: pay per hour based on EC2 and EBS

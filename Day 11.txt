@@ -1,0 +1,59 @@
+AWS Router53 
+
+1.Route53 is a Managed DNS ( Domain name system)
+2.DNS is a collection of rules and records which helps clients understand how to reach a server through its domain name
+In  AWS , the most common records are:
+  A:hostname to IPv4
+  AAAA:hostname to IPv6
+  Cname:hostname to hostname
+  ALias:hostname to AWS resources
+
+
+route53 can use:
+1.public domain names you own (or buy)
+2.private domain names that can be resolved by your instance in your vpc
+
+route53 has advanced:
+1.load balancing ( through dns )
+2.Health checks
+3.Routing policy
+
+
+you pay $0.50 per month per hosted zone
+
+Instantiating application quickly
+
+when launching a full stack (ec2,rds,ebs) it can take time to:
+  1.install application
+  2.recovery of data
+  3.configure everything
+  4.launch the application
+
+EC2 instance:
+
+ use a golden ami: install your application , os dependencies , before and launch your ec3 instance form the golden ami
+ boostraping using user data: user data scripts
+ hybrid: mixing both golden ami and user data
+
+RDS databases:
+  restore a snapshot the database will have schemas and data ready
+ebs volumes:
+  restore the snapshot
+
+
+
+Developer problems in aws:
+
+ 1.managing infrastructure
+ 2.deploying code
+  3.configuring all the databases , load balancers
+ 4.scaling operations
+
+
+
+
+
+
+
+
+

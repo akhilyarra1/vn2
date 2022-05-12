@@ -1,0 +1,105 @@
+Aws 
+Aws : learning
+
+
+Aws cloud History:
+
+
+2002:
+Internally launched
+|
+|
+2003
+|
+|
+Amazon infrastrucute
+is one of their core strength to market
+|
+|
+2004
+launched publicly
+with SQS
+|
+|
+2006
+|
+|
+Re-launched
+with SQS,S3 & EC2
+|
+|
+2007
+Launched in Europe
+
+
+AWS CLoud Number facts:
+
+1.In 2019 , AWS had $35.02 billion in annual revenue
+2.Aws accounts for 47% of the market in 2019
+(microsoft 2nd with 22%)
+3.over 1,000,000 active users 
+
+
+AWS CLOUD use case:
+
+1.AWS enables you to build scalabe application
+2.Applicable to a diverse set of industries
+3.Use case:
+  1.Enterprise IT , Backup & storage , BIG DATA Analytics
+  2.Website hosting , Mobile & social apps
+  3.Gaming
+
+M - 21CenturyFOX - Activision - NETFLIX
+
+
+|
+|
+
+DROPBOX , NETFLIX , AIRBNB , NASA
+
+
+
+
+AWS Global Infrastructure
+
+1.AWS Regions
+2.AWS availabilty zones
+3.Aws data centers
+4.Aws edge locations / point of presence
+
+
+AWS Regions
+
+1.AWS has regions all around the world
+2.Names us-east-1, eu-west-2
+3.A region is a cluster of a data center
+4.Most AWS Services are region-scoped
+
+
+How to choose aws region.?
+1.Compilance 
+2.Proximity
+3.Available services
+4.Pricing
+
+
+AWS Availabilty Zones
+
+1.Each region has many availabilty zones
+(usually 3 min is 2, max is 6)
+ex:
+ mumbai - ap-south-1
+ ava zones:
+    1.ap-south-1a
+    2.ap-south-1b
+    3.ap-south-1c
+
+2.Each avaiabilty zones (AZ) is one or more discrete data center with redundant power,networking and connectivity
+3.They are seprate from each other, so that they are isolate from disasters
+
+
+AWS Point of presence(Edge locations)
+
+1.Amazon has 216 points of Presence(205 edge locations & 11 Region) in 84 cities across 42 countries
+2.Content is deliverd to end users with low latency
+

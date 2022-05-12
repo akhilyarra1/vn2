@@ -1,0 +1,60 @@
+s3 storage classes:
+
+1.s3 standard - general Purpose
+
+1.High durability(99.9999999%) of objects across multiple AZ
+2.If you store 10,000,000 objects with Amazon s3 , you can on average expect
+to incur a loss of single object once every 10,000 years
+3.99.99% availability over a given year
+4.sustain 2 concurrent facility failures
+
+use cases: Big Data analytics , mobile & gaming application , content distrubtio..
+
+2.s3 standard - Infrequent Access( IA )
+
+1.Suitable for data that is less frequently accessed,but requires rapid access 
+when needed
+2.High durability(99.9999999%) of objects across multiple AZ
+3.99.99% availability
+4.Low cost compared to Amazon s3 standard
+
+use case : As a data store for distaer recovery , backups...
+
+3.S3 One Zone - Infrequent access (IA)
+
+1.Same as IA but data is stored in a single AZ
+2.low latency 
+3.Supports SSL
+4.Low cost compared to IA (by 20%)
+
+use case: Storing Secondary backup copies of on-premises data ,or storing data you can recreate
+
+4.S3 Intelligent Tiering
+
+1.Same low latency and high throughput performance of s3 standard
+2.small monthly monitoring and auto-tiering fee
+3.Automatically moves objects between two acces tiers based on changing access
+patterns
+
+
+5.Amazon Glacier
+1.Low cost objects storage meant for archiving / backups
+2.Data is retained for the longer term (10s years)
+3.99.99
+4.Cost per storage per month ($0.004 / GB ) + retrieval cost
+5.Each item in Glacier is called "Archive" ( up to 40TB)
+6.Archives are stored in "vaults"
+
+
+Amazon Glacier & Glacier Deep Archive:
+
+In Amazon Glacier:
+  1.Expedited ( 1 to 5 minutes )
+  2.Standard ( 3 to 5 hours )
+  3.Bulk ( 5 to 12 hours )
+  Minimun storage duration of 90days
+
+Amazon Glacier Deep Archive - for long term storage - cheaper:
+1.standard ( 12 hours )
+2.bulk (48 hours )
+Minimum storage duration of 180 days

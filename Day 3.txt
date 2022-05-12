@@ -1,0 +1,100 @@
+Amazon EC2
+
+1.EC2 is one of the most popular of AWS offering
+2.EC2 = Elastic Compute Cloud = Infrastructure as a service
+3.It mainly consists in the capability of:
+   1.Renting virtual machine(ec2)
+   2.Storing data on virtual devices(EBS)
+   3.Distributing load across machines(ELB)
+   4.Scaling the services using an auto scaling group(ASG)
+
+Knowing EC2 is fundamental to understand how the cloud works
+ 
+EC2 Configuration options
+
+1.Operating System (OS) : LInux, Windows or Macos
+2.How much compute power & cores (in cpu)
+3.How much RAM
+4.How much Storage space:
+   1.Network-attached(EBS)
+   2.hardware(ec2)
+5.Public Ip address
+6.Firewall : Security group
+7.EC2 user data
+
+ec2 user data
+
+1.It is possible to bootstrap our instance using EC2 user data script
+2.Bootstrap means launching commands when a machine starts
+3.That script is only once run at the instance first start
+4.EC2 user data is used to automate boot task such as:
+   1.Installing updates
+   2.Installing softwares
+   3.Downloading common files from the internet
+   4.Anything you can think of
+5.Ec2 user data script runs with the root user
+
+t2.micro is part of the aws free tier (up to 750 hours per month)
+
+
+EC2 Instance Types:
+
+m5.2xlarge
+
+m:instance class
+5:generation (AWS imporves them over time)
+2xlarge:size within the instance
+
+
+
+High cpu-High Ram:
+
+1.Batch Processing workloads
+2.Media Transcoding
+3.High performance web server
+4.HPC
+5.machine learning
+6.Gaming
+
+Memory Optimized
+Use case:
+1.High performance , database
+2.Distributed web scale cache stores
+3.BI
+
+
+Security Groups:
+1.Security groups are the fundamental of network security in AWS
+2.They control how traffic is allowed into or out of ec2 instance
+ 
+   inbound traffic   
+www ------------- ec2 instance
+    outbound traffic
+
+3.Security groups only contain allow rules
+4.reference by IP 
+
+Port number:
+
+22=SSH(secure shell) - log into a linux instance
+21=FTP(File Transfer protocol) - upload files into a file share
+22=SFTP(Secure FTP)- upload files using ssh
+80=HTTP- unsecured websites
+443=HTTPS - secured websites
+3389 - RDP(Remote Dekstop protocol) - log into a windows instance
+
+
+
+Hands -on
+1.Well be launching our first virtual server using the aws console
+2.well get a help-level approach to the various parameter
+3.how we can connect with web with the help our IP address and user data
+4.how to start/stop or terminate our ec2 instance
+
+
+#!/bin/bash
+yum install -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello world</h1>"> /var/www/html/index.html
